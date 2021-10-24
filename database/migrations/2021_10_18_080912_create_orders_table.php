@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSamplesTable extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateSamplesTable extends Migration
      */
     public function up()
     {
-        Schema::create('samples', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('subject');
-            $table->text('description');
-            $table->string('number_of_pages');
-            $table->string('style');
-            $table->string('level');
+            $table->string('service');
+            $table->string('paper_type');
+            $table->text('academic_level');
             $table->string('urgency');
-            $table->string('sources');
+            $table->integer('price');
+            $table->string('pages');
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ class CreateSamplesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('samples');
+        Schema::dropIfExists('orders');
     }
 }

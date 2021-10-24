@@ -40,7 +40,6 @@
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-blue-400 md:mt-0 md:ml-4" href="/services">Services</a>
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-blue-400 md:mt-0 md:ml-4" href="/samples">Samples</a>
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-blue-400 md:mt-0 md:ml-4" href="/reviews">Reviews</a>
-                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-blue-400 md:mt-0 md:ml-4" href="/contact">Contact us</a>
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg hover:text-blue-400 md:w-auto md:inline md:mt-0 md:ml-4">
                         <span>About Us</span>
@@ -49,7 +48,7 @@
                         <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                         <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
                             <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-blue-400 md:mt-0" href="/about">About Us</a>
-                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-blue-400  md:mt-0" href="/terms">Terms of Service</a>
+                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-blue-400 md:mt-0" href="/contact">Contact us</a>
                         </div>
                         </div>
                     </div>

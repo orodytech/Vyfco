@@ -1,6 +1,9 @@
 <div class="md:flex mr-10">
     <div class="md:flex-1">
         <form wire:submit.prevent="submit" class="w-full max-w-lg py-12 px-4 md:mx-10 border-2 m-4 bg-white rounded-md"> 
+       
+             
+   
           <div class="p-4">
             
             @if($step == 0)
@@ -11,69 +14,43 @@
                   Type of Service
                 </label>
                 <div class="relative overflow-auto">
-                  <select class="block appearance-none w-auto bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                    <option>Academic Paper Writing</option>
-                    <option>Rewriting</option>
-                    <option>Math/Physics/Economics/Satistic Problems</option>
-                    <option>Proofreading</option>
-                    <option>Editing</option>
-                    <option>Copywriting</option>
-                    <option>Academic Services</option>
-                    <option>Disertation Services</option>
-                    <option>Resume/CV Services</option>
-                    <option>Multiple Choice Questions(Timed)</option>
-                    <option>Multiple Choice Questions(UnTimed)</option>
+                  <select wire:model="service" class="block appearance-none w-auto bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                    <option value="" selected>--Select Type of Service--</option>
+                    @foreach ($services as $service)
+                    <option value="{{ $service->id }}">{{ $service->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
           </div>
-
           <div class="w-2/3 pb-4 md:mb-0">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
               Type of Paper
             </label>
             <div class="relative">
-              <select class="block appearance-none mb-4 w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                <option>Essay</option>
-                <option>Term Paper</option>
-                <option>Research Paper</option>
-                <option>Capsstone Project</option>
-                <option>Course Work</option>
-                <option>Book Report</option>
-                <option>Outline</option>
-                <option>Book Review</option>
-                <option>Movie Review</option>
-                <option>Critical Essay</option>
-                <option>Research Summary</option>
-                <option>Reflective Writing</option>
-                <option>Thesis</option>
-                <option>Report</option>
-                <option>Case Study</option>
-                <option>Lab Report</option>
-                <option>PPT</option>
-                <option>Article Critique</option>
-                <option>Anoted Bibliography</option>
-                <option>Reaction Paper</option>
-                <option>Project</option>
-                <option>Other</option>
+              <select wire:model="paper" class="block appearance-none mb-4 w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                {{-- @if ($papers->count() == 0)
+                <option value="">-- Choose Paper Type --</option>
+                @endif --}}
+                    @foreach ($papers as $paper)
+                    <option value="{{ $paper->id }}">{{ $paper->name }}</option>
+                    @endforeach
               </select>
             </div>
           </div>
-
           <div class="flex flex-wrap mb-2" wire:model.lazy="academic" for="academic">
-              
-            <div class="w-2/3 md:w-1/3 pb-4 mr-4 md:mb-0">
+            <div class="w-2/3 md:w-2/3 pb-4 mr-4 md:mb-0">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 Academic Level
               </label>
               <div class="relative">
-                <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                  <option>GCSE/A-Level</option>
-                  <option>HNC/HND</option>
-                  <option>Undergraduates</option>
-                  <option>Masters</option>
-                  <option>Doctoral</option>
-  
+                <select wire:model="academic" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                  {{-- @if ($academics->count() == 0)
+                <option value="">-- Select Academic Level --</option>
+                  @endif --}}
+                  @foreach ($academics as $academic)
+                <option value="{{ $academic->id }}">{{ $academic->name }}</option>
+                @endforeach
                 </select>
               </div>
             </div>
@@ -82,19 +59,13 @@
                 Urgency
               </label>
               <div class="relative">
-                <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                  <option>3 Hrs</option>
-                  <option>6 Hrs</option>
-                  <option>12 Hrs</option>
-                  <option>18 Hrs</option>
-                  <option>24 Hrs</option>
-                  <option>48 Hrs</option>
-                  <option>3 Days</option>
-                  <option>6 Days</option>
-                  <option>7 Days</option>
-                  <option>10 Days</option>
-                  <option>14 Days</option>
-  
+                <select wire:model="urgency" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                  @if ($urgencies->count() == 1)
+                <option value="">-- Select Urgency --</option>
+                  @endif
+                    @foreach ($urgencies as $urgency)
+                  <option value="{{ $urgency->id }}">{{ $urgency->name }}</option>
+                  @endforeach
                 </select>
               </div>
             </div>
@@ -118,7 +89,7 @@
             <br>
             <div class="w-full pb-4 md:mb-0">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="quantity">
-                Quantity
+                Number of Pages
               </label>
               <input type="number" name="increment" class="rounded-md w-20" placeholder="1" min="1">
             </div>
@@ -149,10 +120,12 @@
                     </div>
                   </div>
                 </div>
+                @foreach ($prices as $price)
                 <div class="mt-4 md:mt-6">
                   <p class="text-base font-bold text-gray-600">TOTAL PRICE</p>
-                  <p class="pl-10 text-3xl md:text-4xl font-bold"><span><sup class="text-sm mr-2">$</sup>200</span> </p>
+                  <p class="pl-10 text-3xl md:text-4xl font-bold" value="{{ $price->id }}"><span><sup class="text-sm mr-2">$</sup>{{ $price->price }}</span> </p>
                 </div>
+                @endforeach
             </div>
           </div>
 

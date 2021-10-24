@@ -2,12 +2,26 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 
+use Livewire\Component;
+use App\Models\Services;
+use App\Models\Paper;
+use App\Models\Academics;
+use App\Models\Urgency;
+use App\Models\Prices;
 class OrderComponent extends Component
 {
+    public $services;
+    public $papers;
+    public $academics;
+    public $urgencies;
+    public $prices;
+
     public $service;
+    public $paper;
     public $academic;
+    public $urgency;
+    public $price;
    
 
     public $step;
@@ -17,12 +31,27 @@ class OrderComponent extends Component
         'submit2',
       
     ];
-    
 
     public function mount()
     {
         $this->step = 0;
+        $this->services = Services::all();
+        $this->papers = collect();
+        $this->academics = collect();
+        $this->urgencies = collect();
+        $this->prices = collect();
+        
     }
+
+    public function updatedService($value)
+    {
+        $this->papers = Paper::where('service_id', $value)->get();
+        $this->academics = Academics::where('service_id', $value)->get();
+        $this->urgencies = Urgency::where('academic_id', $value)->get();
+        $this->prices = Prices::where('urgency_id', $value)->get();
+
+    }
+
 
     public function increaseStep(){
         $this->step++;

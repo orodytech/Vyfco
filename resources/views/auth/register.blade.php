@@ -66,10 +66,12 @@
                       Register
                     </button>
                   </div>
+                  <p class="text-center">By Registering, you agree to our <a href="/terms"
+                    class="text-indigo-400 hover:text-blue-500 no-underline cursor-pointer transition ease-in duration-300">Terms of Service</a></p>
                   <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
                     <span>Already have an account?</span>
                     <a href="login"
-                      class="modal-open text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign
+                      class="text-indigo-400 hover:text-blue-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign
                       In</a>
                   </p>
                 </form>

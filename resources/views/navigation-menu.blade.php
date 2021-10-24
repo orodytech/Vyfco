@@ -10,14 +10,14 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Place Order') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="/order">
-                        {{ __('Order') }}
-                    </x-jet-nav-link>
                     <x-jet-nav-link href="/create_sample">
                         {{ __('Create Sample') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="/samples">
-                        {{ __('Samples') }}
+                        {{ __('Sample') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="/">
+                        {{ __('Home') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="/reviews">
                         {{ __('Reviews') }}

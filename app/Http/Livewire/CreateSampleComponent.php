@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\samples;
+use Livewire\WithFileUploads;
 
 class CreateSampleComponent extends Component
 {
@@ -16,7 +17,10 @@ class CreateSampleComponent extends Component
     public $level;
     public $urgency;
     public $sources;
+    public $filename;
    
+
+    use WithFileUploads;
     public function submit()
     {
         $validatedData = $this->validate([
@@ -28,9 +32,13 @@ class CreateSampleComponent extends Component
             'level' => 'required',
             'urgency' => 'required',
             'sources' => 'required',
+            'filename' => 'required',
         ]);
    
+        $filename = $this->filename->store('files', 'public');
+        $validatedData['filename'] = $filename;
         samples::create($validatedData);
+        session()->flash('message', 'Samples uploaded Succesfully');
    
         return redirect()->to('/create_sample');
     }

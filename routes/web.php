@@ -11,6 +11,7 @@ use App\Http\Livewire\TermsComponent;
 use App\Http\Livewire\PolicyComponent;
 use App\Http\Livewire\OrderComponent;
 use App\Http\Livewire\CreateSampleComponent;
+use App\Http\Livewire\CreateOrderComponent;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -35,6 +36,7 @@ Route::get('/order', OrderComponent::class);
 
 // Admin routes
 Route::get('/create_sample', CreateSampleComponent::class);
+Route::get('/create_orders', CreateOrderComponent::class);
 
 
 

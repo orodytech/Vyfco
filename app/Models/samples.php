@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class samples extends Model
 {
+    protected $table = "samples";
+    
     protected $fillable = [
         'name',
         'subject',
@@ -16,6 +18,7 @@ class samples extends Model
         'level',
         'urgency',
         'sources',
+        'filename',
     ];
 
    

@@ -1,6 +1,12 @@
 <div>
+    @if (session()->has('message'))
+    <div class="text-green-700 bg-green-200 pt-2">
+        {{ session('message') }}
+    </div>
+    @endif
 
     <form wire:submit.prevent="submit">
+        @csrf
         <div class="form-group">
             <label for="exampleInputName">Sample Name</label>
             <input type="text" class="form-control" id="exampleInputName" placeholder="Enter name" wire:model="name">
@@ -40,6 +46,11 @@
             <label for="exampleInputName">Sources</label>
             <input type="text" class="form-control" id="exampleInputName" placeholder="Enter name" wire:model="sources">
             @error('sources') <span class="text-danger">{{ $message }}</span> @enderror
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName">Sources</label>
+            <input type="file" class="form-control" name="filename" placeholder="Enter name" wire:model="filename">
+            @error('filename') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
         
        
