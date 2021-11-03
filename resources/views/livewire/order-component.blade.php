@@ -120,12 +120,12 @@
                     </div>
                   </div>
                 </div>
-                @foreach ($prices as $price)
-                <div class="mt-4 md:mt-6">
+                <div class="mt-4 md:mt-6" wire:model="price">
+                  @foreach ($prices as $price)
                   <p class="text-base font-bold text-gray-600">TOTAL PRICE</p>
                   <p class="pl-10 text-3xl md:text-4xl font-bold" value="{{ $price->id }}"><span><sup class="text-sm mr-2">$</sup>{{ $price->price }}</span> </p>
+                  @endforeach
                 </div>
-                @endforeach
             </div>
           </div>
 

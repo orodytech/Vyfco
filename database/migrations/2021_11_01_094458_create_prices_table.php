@@ -15,9 +15,9 @@ class CreatePricesTable extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->id();
-            $table->integer('price');
-            $table->integer('page_number');
             $table->foreignId('urgency_id')->constrained();
+            $table->string('price')->nullable();
+            $table->string('page_number')->nullable();
             $table->timestamps();
         });
     }

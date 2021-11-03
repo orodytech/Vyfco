@@ -9,16 +9,12 @@ class Urgency extends Model
 {
     protected $fillable = [
         'academic_id',
-        'name',
-        'price',
-        'page_number',
-        
-        
+        'name', 
     ];
-    // public function prices()
-    // {
-    //     return $this->hasMany(Prices::class, 'urgency_id');
-    // }
+    public function prices()
+    {
+        return $this->hasMany(Prices::class, 'urgency_id');
+    }
     public function academics()
     {
         return $this->belongsTo(Academics::class, 'academic_id');
