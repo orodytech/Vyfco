@@ -28,7 +28,9 @@
                             <div class="order-button mb-3">
                                 <div class="flex items-center space-x-3">
                                     <div class="question">
-                                        <a href="{{ url('/img/pdf/bayes1.png') }}" class="text-indigo-600 text-sm">Need A paper like this?<a/>
+                                        {{-- <a href="{{ url('/img/pdf/bayes1.png') }}" class="text-indigo-600 text-sm">Need A paper like this?<a/> --}}
+                                        <a href="#" class="text-indigo-600 text-sm">Need A paper like this?<a/>
+
                                     </div>
                                     <div class="button p-1 hover:bg-indigo-400 bg-indigo-600 text-white rounded-md text-sm">
                                         <a href="login" class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -9,15 +9,17 @@ class Academics extends Model
 {
     protected $fillable = [
         'name',
-        'service_id',
+        'service_id2',
         
     ];
-    public function urgencies()
-    {
-        return $this->hasMany(Urgency::class, 'academic_id');
-    }
+   
     public function services()
     {
         return $this->belongsTo(Services::class, 'service_id');
+    }
+
+    public function urgencies()
+    {
+        return $this->hasMany(Urgency::class, 'academic_id');
     }
 }

@@ -18,6 +18,6 @@ class Services extends Model
 
     public function academics()
     {
-        return $this->hasMany(Academics::class, 'service_id');
+        return $this->hasMany(Academics::class, 'service_id2');
     }
 }

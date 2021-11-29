@@ -93,6 +93,9 @@
                     </div>
                   </div>
                 </div>
+                <div class="text-center mt-10">
+                  <button class="bg-yellow-300 text-blue-600 py-5 px-14 font-semibold hover:bg-yellow-200 transition duration-200 rounded-md shadow-lg"><a href="login">GET STARTERD<i class="fa fa-long-arrow-right pl-4 w-10" aria-hidden="true"></i></a></button>
+                </div>
             </section>
     
             {{-- How It Works --}}
@@ -395,7 +398,6 @@
                   </div>
                 </div>
               </div>
-                
             </section>
     
     </section>

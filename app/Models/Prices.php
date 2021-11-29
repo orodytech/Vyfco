@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Prices extends Model
 {
     protected $fillable = [
-        'urgency_id',
-        'price', 
-        'page_number',
+        'price',
+        'urgency_id', 
+        'quantity',
     ];
 
-    public function urgency()
+    public function urgencies()
     {
-        return $this->belongsTo(Urgency::class, 'urgency_id');
+        return $this->belongsToMany(Urgency::class, 'urgency_id');
     }
 }

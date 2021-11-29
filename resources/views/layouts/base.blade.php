@@ -71,9 +71,7 @@
                 <div class="sm:flex sm:mt-8">
                     <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                         <div class="flex flex-col">
-                            <span class="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Address</span>
-                            <span><a href="#" class="text-gray-400  text-sm hover:text-white">Street Location</a></span>
-                            <span><a href="#" class="text-gray-400  text-sm hover:text-white">Street Number</a></span>
+                            <span class="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Contact Us</span>
                             <span><a href="mailto:info@vyfco.com" class="text-gray-400  text-sm hover:text-white"><b class="text-gray-200">Email:</b> info@vyfco.com</a></span>
                             <span><a href="#" class="text-gray-400  text-sm hover:text-white"><b class="text-gray-200">Contact:</b> +1 xxx xxx xxx xxx</a></span>
                             <span><a href="/terms" class="text-gray-400 cursor-pointer  text-sm hover:text-white">Terms of Service</a></span>
@@ -105,7 +103,7 @@
                     border-t border-b border-gray-500 text-gray-400 text-sm 
                     flex-col md:flex-row max-w-6xl">
                     <div class="mt-2 text-center">
-                        © Copyright 2021 | Vyfco Research & Writing | Designed by Orodytech Solutions | All Rights Reserved.
+                        © Copyright 2021 | Vyfco Research & Writing | <a href="https://www.facebook.com/orodytech" target="_blank">Designed by Orodytech Solutions</a>  | All Rights Reserved.
                     </div>
 
                     <!-- Required Unicons -->

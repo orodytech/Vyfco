@@ -1,9 +1,10 @@
+
+
 <div class="md:flex mr-10">
     <div class="md:flex-1">
+      <p class="text-xs md:text-lg pt-10 pl-10 text-blue-900"><span class="font-bold uppercase">nb:</span>Math/physics/ Economics/ Statistic problems prices are per problem and not per page.</p>
         <form wire:submit.prevent="submit" class="w-full max-w-lg py-12 px-4 md:mx-10 border-2 m-4 bg-white rounded-md"> 
-       
-             
-   
+          @csrf
           <div class="p-4">
             
             @if($step == 0)
@@ -59,12 +60,10 @@
                 Urgency
               </label>
               <div class="relative">
-                <select wire:model="urgency" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                  @if ($urgencies->count() == 1)
-                <option value="">-- Select Urgency --</option>
-                  @endif
+                <select  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                
                     @foreach ($urgencies as $urgency)
-                  <option value="{{ $urgency->id }}">{{ $urgency->name }}</option>
+                  <option value="{{ $urgency->id }}">{{ $urgency->due }}</option>
                   @endforeach
                 </select>
               </div>
@@ -120,11 +119,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="mt-4 md:mt-6" wire:model="price">
-                  @foreach ($prices as $price)
+                <div class="mt-4 md:mt-6">
                   <p class="text-base font-bold text-gray-600">TOTAL PRICE</p>
-                  <p class="pl-10 text-3xl md:text-4xl font-bold" value="{{ $price->id }}"><span><sup class="text-sm mr-2">$</sup>{{ $price->price }}</span> </p>
-                  @endforeach
+                  <p class="pl-10 text-3xl md:text-4xl font-bold" wire:model="price" >
+                    @foreach ($prices as $price)
+                    <span><sup class="text-sm mr-2" value={{ $price->id }}>$</sup>{{ $price->price }}</span> 
+                    @endforeach
+                  </p>
                 </div>
             </div>
           </div>
@@ -180,8 +181,12 @@
           
           <!----- Side Section ----->
       <div class="m-4 w-full md:w-1/2  md:pl-10">
-        <div class="shadow-md px-4 pt-4 pb-4 rounded-md">
-            <div class="payment">
+          <div class="hidden md:block text-center mt-20 shadow-lg h-40 bg-blue-700 py-18 px-24 rounded-md">
+            <h1 class="text-white py-4 text-2xl capitalize font-semibold">Place Your First Order</h1>
+            <P class="text-yellow-400 text-3xl font-extrabold transform animate-bounce duration-500">GET 10% DISCOUNT</P>
+          </div>
+        <div class="shadow-md px-4 pt-4 pb-4 mt-20 rounded-md">
+            {{-- <div class="payment">
                 <h1 class="capitalize text-blue-700 text-xl lg:text-xl text-center font-bold">Accepted payment methods</h1>
                 <p class="mt-2 text-gray-600">You can make your payments via the following reliable methods:</p>
                 <div class="flex mt-4 text-4xl text-gray-400 justify-center space-x-4 ">
@@ -189,14 +194,9 @@
                     <i class="fa fa-cc-mastercard hover:text-blue-400" aria-hidden="true"></i>
                     <i class="fa fa-cc-paypal hover:text-blue-400" aria-hidden="true"></i>
                 </div>
-            </div>
+            </div> --}}
         </div>
-        <div class="hidden md:block mt-20 p-8 h-64 bg-purple-700 rounded-md" style=" box-shadow: rgba(219, 6, 6, 0.979) 0px 22px 70px 4px;">
-          <div class="text-center h-40 bg-black py-18 px-24 rounded-md">
-            <h1 class="text-white py-4 text-2xl capitalize font-semibold">Place Your First Order</h1>
-            <P class="text-yellow-400 text-4xl font-extrabold transform animate-bounce duration-500">GET 10% DISCOUNT</P>
-          </div>
-        </div>
+      
       </div>
     </div>
 </div>

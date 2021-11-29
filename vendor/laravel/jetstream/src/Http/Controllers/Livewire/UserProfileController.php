@@ -14,7 +14,12 @@ class UserProfileController extends Controller
      * @return \Illuminate\View\View
      */
     public function show(Request $request)
-    {
+    {   if(session('utype') === 'ADM'){
+        return view('profile.admin-show', [
+            'request' => $request,
+            'user' => $request->user(),
+        ]);
+    }
         return view('profile.show', [
             'request' => $request,
             'user' => $request->user(),

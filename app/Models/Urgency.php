@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Urgency extends Model
 {
     protected $fillable = [
+        'due',
         'academic_id',
-        'name', 
+    
     ];
     public function prices()
     {

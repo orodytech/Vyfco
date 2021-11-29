@@ -34,16 +34,23 @@ Route::get('/policy', PolicyComponent::class);
 Route::get('/order', OrderComponent::class);
 
 
+
 // Admin routes
 Route::get('/create_sample', CreateSampleComponent::class);
 Route::get('/create_orders', CreateOrderComponent::class);
 
 
-
+//User Dashboard
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+//Admin dashboard
+Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->get('admin/dashboard', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard');
+
 
 
 Route::get('/email/verify', function () {

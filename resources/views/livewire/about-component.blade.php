@@ -13,6 +13,9 @@
                     want a high-quality outcome in a short time frame. Our professionals are graduates from the world's most prestigious institutions, 
                     and all of them have passed the Vyfco exam and have demonstrated their expertise to our staff.
                 </p>
+                <div class="text-center mt-5">
+                  <button class="bg-yellow-300 text-blue-600 py-5 px-14 font-semibold hover:bg-yellow-200 transition duration-200 rounded-md shadow-lg"><a href="login">GET STARTERD<i class="fa fa-long-arrow-right pl-4 w-10" aria-hidden="true"></i></a></button>
+                </div>
             </div>
             <div class="h-full p-4">
                 <img src="{{ asset('img/writer.jpg') }}" alt="Research and Writing" class="lg:h-full lg:w-full md:h-full w-full object-center object-cover rounded-lg shadow-md">
@@ -36,7 +39,7 @@
     <!---------- Asked Questions -------->
     <div class="flex justify-center m-4">
         <div class="w-full sm:w-10/12 md:w-1/2 my-1">
-          <h2 class="text-2xl font-semibold text-center mb-2">Frequently asked questions</h2>
+          <h2 class="text-2xl font-semibold text-center mb-2">Frequently Asked Questions - FAQs</h2>
           <ul class="flex flex-col">
             <li class="bg-pink-500 my-2 shadow-lg rounded-md" x-data="accordion(1)">
               <h2

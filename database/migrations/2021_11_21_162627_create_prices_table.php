@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUrgenciesTable extends Migration
+class CreatePricesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateUrgenciesTable extends Migration
      */
     public function up()
     {
-        Schema::create('urgencies', function (Blueprint $table) {
+        Schema::create('prices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('academic_id')->constrained();
-            $table->string('name')->nullable();
+            $table->string('price');
+            $table->foreignId('urgency_id')->constrained();
+            $table->decimal('quantity');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateUrgenciesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('urgencies');
+        Schema::dropIfExists('prices');
     }
 }
