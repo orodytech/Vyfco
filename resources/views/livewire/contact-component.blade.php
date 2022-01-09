@@ -10,7 +10,7 @@
                 <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div class="pr-12">
                     <h1 class="text-white capitalize font-semibold text-3xl sm:text-4xl md:text-5xl">
-                      get in touch with vyfco team
+                      get in touch with <br> vyfco team
                     </h1>
                     <p class="mt-4 text-lg text-blue-200">
                       We are here to help you any time any moment

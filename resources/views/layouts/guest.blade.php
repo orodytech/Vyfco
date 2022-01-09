@@ -72,7 +72,7 @@
                         <div class="flex flex-col">
                             <span class="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Contact Us</span>
                             <span><a href="mailto:info@vyfco.com" class="text-gray-400  text-sm hover:text-white"><b class="text-gray-200">Email:</b> info@vyfco.com</a></span>
-                            <span><a href="#" class="text-gray-400  text-sm hover:text-white"><b class="text-gray-200">Contact:</b> +1 xxx xxx xxx xxx</a></span>
+                            <span><a href="#" class="text-gray-400  text-sm hover:text-white"><b class="text-gray-200">Contact:</b> +44 7451271066</a></span>
                             <span><a href="/terms" class="text-gray-400 cursor-pointer  text-sm hover:text-white">Terms of Service</a></span>
                             <span><a href="/policy" class="text-gray-400 cursor-pointer  text-sm hover:text-white">Policy</a></span>
                         </div>
@@ -80,7 +80,7 @@
                         <div class="flex flex-col">
                             <span class="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Our Services</span>
                             <span><a href="/services" class="text-gray-400  text-sm hover:text-white">Writing</a></span>
-                            <span><a href="/services" class="text-gray-400  text-sm hover:text-white">Rewriting</a></span>
+                            <span><a href="/services" class="text-gray-400  text-sm hover:text-white">Rewriting</a></spa n>
                             <span><a href="/services" class="text-gray-400  text-sm hover:text-white">Proofreading</a></span>
                             <span><a href="/services" class="text-gray-400  text-sm hover:text-white">Editing</a></span>
                         </div>
@@ -102,7 +102,7 @@
                     border-t border-b border-gray-500 text-gray-400 text-sm 
                     flex-col md:flex-row max-w-6xl">
                     <div class="mt-2 text-center">
-                        © Copyright 2021 | Vyfco Research & Writing | <a href="https://www.facebook.com/orodytech" target="_blank">Designed by Orodytech Solutions</a> | All Rights Reserved.
+                        © Copyright <span id="year"></span> | Vyfco Research & Writing | <a href="https://www.facebook.com/orodytech" target="_blank">Designed by Orodytech Solutions</a> | All Rights Reserved.
                     </div>
 
                     <!-- Required Unicons -->
@@ -125,6 +125,13 @@
         </footer>
 		{{-- jQuery --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        {{-- get year --}}
+        <script>
+            const d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("year").innerHTML = year;
+        </script>
 
 		{{-- owlcarousel --}}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

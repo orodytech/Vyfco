@@ -8,7 +8,7 @@
               style="background-image: url('./img/login.jpg');">
               <div class="absolute bg-black opacity-75 inset-0 z-0"></div>
               <div class="w-full  max-w-lg z-10">
-                    <div class="sm:text-4xl xl:text-5xl font-bold mb-6 text-center">Login & Place Your Today</div>
+                    <div class="sm:text-4xl xl:text-4xl font-bold mb-6 text-center">Login & Place <br> Your Order Today</div>
                     
               </div>
             </div>
@@ -32,7 +32,7 @@
                       <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email</label>
                       <input
                         class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
-                        name="email" placeholder="Type your email" type="email" :value="old('email')" required autofocus>
+                        name="email" placeholder="Type your email" type="email" :value="old('email')">
                     </div>
                     <div class="mt-8 content-center">
                       <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">

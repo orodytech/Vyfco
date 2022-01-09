@@ -1,4 +1,4 @@
-<section class="bg-gradient-to-b from-indigo-500  to-blue-600">
+<section class="bg-gradient-to-b from-blue-900 to-purple-900">
     <div>
       <div class="flex py-10 flex-col mx-10 lg:mx-5">
             <h1 class="pb-5 text-4xl text-yellow-400 text-center font-semibold">Our <span class="text-white">Services</span></h1>
@@ -9,7 +9,7 @@
           <div class="flex flex-col lg:grid-col-3 md:flex-row md:space-x-4 sm:flex-row sm:space-x-3">
             
             <!----- Card 1 ----->
-            <div class="w-full bg-blue-900 p-2 mb-4 rounded-md shadow-md">
+            <div class="w-full bg-purple-500 p-2 mb-4 rounded-md shadow-md">
               <p class="flex capitalize items-center pb-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-300" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
               </svg>Admission/scholarship essay</p>
@@ -61,7 +61,7 @@
             </div>
     
             <!------ Card 2------>
-            <div class="w-full bg-blue-900 p-2 mb-4 rounded-md shadow-md">
+            <div class="w-full bg-purple-500 p-2 mb-4 rounded-md shadow-md">
               <p class="flex capitalize items-center pb-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-300" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
               </svg>Cover letters</p>
@@ -113,7 +113,7 @@
             </div>
     
                     <!----- Card 3 ----->
-                    <div class="w-full bg-blue-900 p-2 mb-4 rounded-md shadow-md">
+                    <div class="w-full bg-purple-500 p-2 mb-4 rounded-md shadow-md">
                       <p class="flex capitalize items-center pb-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-300" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                       </svg>Medical Essay</p>
@@ -162,7 +162,7 @@
                     </div>
     
                      <!----- Card 4 ----->
-                     <div class="w-full bg-blue-900 p-2 mb-4 rounded-md shadow-md">
+                     <div class="w-full bg-purple-500 p-2 mb-4 rounded-md shadow-md">
                       <p class="flex capitalize items-center pb-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-300" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                       </svg>reflective writing</p>
@@ -214,9 +214,9 @@
     </section>
         <!------ Extra Services ------->
     
-      <div class="bg-gradient-to-b pt-9 from-blue-600 to-blue-900">
+      <div class="bg-purple-900">
           <h2 class="text-center text-white capitalize text-4xl xl:text-3xl">Enjoy Our Extra Services</h2>
-          <p class="text-gray-200 py-2 text-justify md:text-center px-4">When you purchase the academic research services from us, you can 
+          <p class="text-gray-300 py-2 text-justify md:text-center px-4">When you purchase the academic research services from us, you can 
             anticipate first-rate assistance from start to end. We constantly make sure that you are an 
             essential part of the process, in addition to 100 percent secrecy and dedication from committed 
             and professional topic writers. We also understand the importance of meeting deadlines in the academic 

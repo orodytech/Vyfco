@@ -1,11 +1,11 @@
-<section class="container mx-auto mt-10">
+<section class="container bg-gradient-to-b from-blue-900 to-purple-900">
 
     <!-------- About Section ------->
-    <div>
-        <h1 class="uppercase text-4xl font-semibold text-center">About <span class="text-blue-800">Vyfco</span> </h1>
+    <div class="pt-10">
+        <h1 class="uppercase text-4xl font-semibold text-yellow-300 text-center">About <span class="text-white">Vyfco</span> </h1>
         <div class="flex flex-col md:flex-row-reverse lg:mx-auto md:space-x-2 lg:flex-row-reverse lg:space-x-0">
             <div class="px-4">
-                <p class="text-justify text-gray-600 lg:text-xl md:text-lg mt-2">
+                <p class="text-justify text-gray-300 lg:text-xl md:text-lg mt-2">
                     Vyfco is a group of seasoned professionals and enthusiastic geeks who are dedicated to improving educational processes 
                     all over the world. Cooperation, we feel, is the most effective approach to make learning simpler and more successful. 
                     That's why, in cooperation with leading educators from across the world, we create ground-breaking Education Tech solutions 
@@ -24,22 +24,26 @@
     </div>
 
     <!------- Vision and Mission ------>
-    <div class="flex flex-col md:flex-row md:space-x-4 p-4">
-        <div class="h-40 md:flex-1 rounded-lg shadow-lg p-4 bg-gradient-to-bl from-blue-800 to-blue-500 bg-opacity-50 mb-4">
+    <div class="flex flex-col md:flex-row md:space-x-4 p-4 md:mx-40 mt-20">
+        <div class="h-45 md:flex-1 rounded-lg shadow-lg p-4 bg-gradient-to-bl from-blue-800 to-blue-500 bg-opacity-50 mb-4">
             <h2 class="text-2xl text-yellow-200 text-center">Our Mission</h2>
-            <p class="text-gray-200 text-justify">To make your academic journey easier and assist you to graduate on time.</p>
+            <p class="text-gray-200 text-justify">To journey with you in your academic path and help you graduate on time with good grades.</p> 
+             <p class="text-gray-200 text-justify italic pt-4">“We are in the industry because we value you, Vyfco will change your experience by giving you exactly what you need”
+            </p>
         </div> 
-        <div class="h-40 md:flex-1 rounded-lg shadow-lg p-4 bg-gradient-to-bl from-blue-800 to-blue-500 bg-opacity-50">
+        <div class="h-43 md:flex-1 rounded-lg shadow-lg p-4 bg-gradient-to-bl from-blue-800 to-blue-500 bg-opacity-50">
             <h2 class="text-2xl text-yellow-200 text-center">Our Vision</h2>
-            <p class="text-gray-200 text-justify">Lorem, t. Earum distinctio quam fugiat, et sit porro odit odio eveniet blanditiis est laudantium, placeat sint ipsum ratione corporis ullam sed dolores officiis.</p>
+            <p class="text-gray-200 text-justify">To connect ambitious students and scholars with top specialists in a variety of subjects. We trust that our unique approach will help to enhance the educational process, and ultimately enable our clients to achieve their goals successfully.</p>
+             <p class="text-gray-200 text-justify italic pt-4">“We constantly increase your knowledge, whether it's proofreading your assignment, checking your essay for plagiarism, writing your research task, or assisting you in finding appropriate sources for your academic writing.”
+            </p>
         </div> 
     </div>
 
 
     <!---------- Asked Questions -------->
-    <div class="flex justify-center m-4">
+    <div class="flex justify-center pb-10 px-5">
         <div class="w-full sm:w-10/12 md:w-1/2 my-1">
-          <h2 class="text-2xl font-semibold text-center mb-2">Frequently Asked Questions - FAQs</h2>
+          <h2 class="text-lg md:text-2xl text-white font-semibold text-center mb-2">Frequently Asked Questions - FAQs</h2>
           <ul class="flex flex-col">
             <li class="bg-pink-500 my-2 shadow-lg rounded-md" x-data="accordion(1)">
               <h2

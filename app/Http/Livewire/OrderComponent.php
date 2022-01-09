@@ -9,6 +9,8 @@ use App\Models\Paper;
 use App\Models\Academics;
 use App\Models\Urgency;
 use App\Models\Prices;
+use App\Models\Format;
+
 
 
 class OrderComponent extends Component
@@ -18,6 +20,7 @@ class OrderComponent extends Component
     public $academics;
     public $urgencies;
     public $prices;
+    public $formats;
     
 
     
@@ -26,25 +29,28 @@ class OrderComponent extends Component
     public $academic;
     public $urgency;
     public $price;
+    public $format;
    
    
 
-    public $step;
+    // public $step;
 
-    private $stepActions = [
-        'submit1',
-        'submit2',
+    // private $stepActions = [
+    //     'submit1',
+    //     'submit2',
       
-    ];
+    // ];
 
     public function mount()
     {
-        $this->step = 0;
+        // $this->step = 0;
         $this->services = Services::all();
         $this->papers = collect();
-        $this->academics = Academics::all();
+        $this->academics = collect();
         $this->urgencies = collect();
         $this->prices = collect();
+        $this->formats = Format::all();
+
 
       
         
@@ -61,47 +67,45 @@ class OrderComponent extends Component
     public function updatedAcademic($value)
     {
         $this->urgencies = Urgency::where('academic_id', $value)->get();     
-        $this->prices = Prices::where('urgency_id', $value)->get();     
 
 
     }
 
-    // public function updatedUrgenc($value)
-    // {
-
-
-    // }
+    public function updatedUrgency($value)
+    {
+        $this->prices = Prices::where('urgency_id', $value)->get();     
+    }
    
 
-    public function increaseStep(){
-        $this->step++;
-    }
+    // public function increaseStep(){
+    //     $this->step++;
+    // }
 
-    public function decreaseStep(){
-        $this->step--;
-    }
+    // public function decreaseStep(){
+    //     $this->step--;
+    // }
 
     public function render()
     {
         return view('livewire.order-component');
     }
 
-    public function submit(){
-        $action = $this->stepActions[$this->step];
-        $this->$action();
-    }
+    // public function submit(){
+    //     $action = $this->stepActions[$this->step];
+    //     $this->$action();
+    // }
 
-    public function submit1(){
+    // public function submit1(){
        
 
-        $this->step++;
-    }
+    //     $this->step++;
+    // }
 
-    public function submit2(){
+    // public function submit2(){
         
 
-        $this->step++;
-    }
+    //     $this->step++;
+    // }
 
   
 } 
