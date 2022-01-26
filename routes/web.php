@@ -35,7 +35,7 @@ Route::get('/about', AboutComponent::class);
 Route::get('/terms', TermsComponent::class);
 Route::get('/policy', PolicyComponent::class);
 Route::get('/order', OrderComponent::class);
-Route::get('/cart', CartComponent::class);
+Route::get('/cart', CartComponent::class)->name('order.cart');
 
 
 

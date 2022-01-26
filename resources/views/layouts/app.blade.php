@@ -17,6 +17,40 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script>
+            $('#ordernow').click(()=>{
+          var service = document.getElementById("service").value;
+          var academic = document.getElementById("academic").value;
+          var urgency = document.getElementById("urgency").value;
+          var format = document.getElementById("format").value;
+          var price = document.getElementById("price").value;
+          var instructions = document.getElementById("instructions").value;
+          var paper = document.getElementById("paper").value;
+          $.ajax({
+                  url: "/cart",
+                  type:"POST",
+                  data:{
+                    service:service,
+                    academic:academic,
+                    urgency:urgency,
+                    price:price,
+                    format:format,
+                    instructions:instructions,
+                    paper:paer,
+                  },
+                  success:function(response){
+                    console.log(response);
+                    if(response) {
+                      $('.success').text(response.success);
+                      $("#ajaxform")[0].reset();
+                    }
+                  },
+                  error: function(error) {
+                   console.log(error);
+                  }
+                 });
+          });
+          </script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
